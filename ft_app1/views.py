@@ -10,6 +10,12 @@ def home(request):
 
 def bar(request):
     return render(request,'ft_app1/navbar.html')
+
+
+def addinc(request):
+    return render(request,'ft_app1/add_income.html')
+
+    
 def regiister(request):
     if request.method=='POST':
         form=UserRegisterForm(request.POST)

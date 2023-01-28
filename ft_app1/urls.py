@@ -9,4 +9,5 @@ urlpatterns=[
     path('login/',auth_views.LoginView.as_view(template_name='ft_app1/login.html'), name='login'),
     path('logout/',auth_views.LogoutView.as_view(template_name='ft_app1/logout.html'), name='logout'),
     path('bar/',views.bar,name="navbar"),
+    path('addinc/',views.addinc,name="addinc"),
 ]

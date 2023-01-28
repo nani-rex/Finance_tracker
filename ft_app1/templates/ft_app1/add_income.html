@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
-    <!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dropdown Menu with Search Box | CodingNepal</title>
-  <link rel="stylesheet" href="nav1.css">
- </head>
-<body>
-  <div class="wrapper">
+    <link rel="stylesheet" href="{% static 'css/navbar_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/add_income.css' %}" />
+  </head>
+  <body>
+    <div class="wrapper">
     <nav>
       <input type="checkbox" id="show-search">
       <input type="checkbox" id="show-menu">
       <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
       <div class="content">
-      <div class="logo"><a href="#">WEALTHWISE</a></div>
+      <div class="logo"><a href="#">CHRIMATA</a></div>
         <ul class="links">
-          <li><a href="#">Home</a></li>
+          <li><a href="home_page.html">Home</a></li>
           <li>
             <a href="#" class="desktop-link">Income</a>
             <input type="checkbox" id="show-features">
             <label for="show-features">Features</label>
             <ul>
-              <li><a href="adding icome.html">add income</a></li>
-              <li><a href="viewincome.html">view incomes</a></li>
+              <a href="{% url 'addinc' %}">add income</a>
+              <li><a href="view_income.html">view incomes</a></li>
             </ul>
           </li>
           <li>
@@ -57,31 +48,23 @@
             <li>
               <nav>
                 <a href="test profile.html">
-                  <img src="C:\Users\bggna\Downloads\profile.png" alt="profile" height="30" width="30">
+                  <img src="{% static 'prof_def.jpeg' %}" alt="profile" height="30" width="30">
                 </a>
               </nav>
-             
-      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-      <form action="#" class="search-box">
-        <input type="text" placeholder="Type Something to Search..." required>
-        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-      </form>
     </nav>
   </div>
 
-</body>
+  <form method="post" action="/add_income">
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" />
+    <br />
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" />
+    <br />
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" />
+    <br />
+    <input type="submit" value="Add Income" />
+  </form>
+  </body>
 </html>
-    <link href="addIncome.css" rel="stylesheet" type="text/css">
-
-    <form method="post" action="/add_income">
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description">
-        <br>
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount">
-        <br>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date">
-        <br>
-        <input type="submit" value="Add Income">
-    </body>
