@@ -13,4 +13,6 @@ urlpatterns=[
     path('addrem/',views.addrem,name="addrem"),
     path('addexp/',views.addexp,name="addexp"),
     path('uprof/',views.uprof,name="uprof"),
+    path('viewinc/',views.viewinc,name="viewinc"),
+    path('viewexp/',views.viewexp,name="viewexp"),
 ]

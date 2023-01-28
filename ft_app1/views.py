@@ -18,6 +18,14 @@ def addinc(request):
     return render(request,'ft_app1/add_income.html')
 
 @login_required
+def viewinc(request):
+    return render(request,'ft_app1/view_income.html')
+
+@login_required
+def viewexp(request):
+    return render(request,'ft_app1/view_expense.html')
+
+@login_required
 def addrem(request):
     return render(request,'ft_app1/add_reminder.html')
 
