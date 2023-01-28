@@ -20,7 +20,10 @@ def addrem(request):
 
 def addexp(request):
     return render(request,'ft_app1/add_expense.html')
-     
+
+def uprof(request):
+    return render(request,'ft_app1/u_profile.html')
+
 def regiister(request):
     if request.method=='POST':
         form=UserRegisterForm(request.POST)

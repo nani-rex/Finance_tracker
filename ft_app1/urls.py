@@ -12,4 +12,5 @@ urlpatterns=[
     path('addinc/',views.addinc,name="addinc"),
     path('addrem/',views.addrem,name="addrem"),
     path('addexp/',views.addexp,name="addexp"),
+    path('uprof/',views.uprof,name="uprof"),
 ]
