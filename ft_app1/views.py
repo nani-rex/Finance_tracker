@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .forms import UserRegisterForm
-
+from .models import Income
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required
