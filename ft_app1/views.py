@@ -6,7 +6,7 @@ from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1>Hello HttpResponse</h1>')
+    return render(request,'ft_app1/home.html')
 
 def bar(request):
     return render(request,'ft_app1/navbar.html')
