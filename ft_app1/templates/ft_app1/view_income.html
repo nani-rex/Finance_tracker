@@ -59,14 +59,14 @@
 
   <table>
     {% for incu in inci %}
-      {% if incu.author == request.user %}
-        <tr>
-          <th>{{incu.catg}}</th>
-          <th>{{incu.amt}}</th>
-          <th> {{incu.date}}</th>
-        </tr>
-      {% endif %}
-    {% endfor %}
+    {% if incu.author == request.user %}
+      <tr>
+        <th>{{incu.catg}}</th>
+        <th>{{incu.amt}}</th>
+        <th> {{incu.date}}</th>
+      </tr>
+    {% endif %}
+  {% endfor %}
   </table>
 
 

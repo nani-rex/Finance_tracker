@@ -11,6 +11,11 @@ class Income(models.Model):
     date=models.DateField()
     author=models.ForeignKey(User,on_delete=models.CASCADE)
 
+class Expense(models.Model):
+    cag=models.CharField(max_length=100)
+    amnt=models.BigIntegerField()
+    daet=models.DateField()
+    autor=models.ForeignKey(User,on_delete=models.CASCADE)
 
 
 

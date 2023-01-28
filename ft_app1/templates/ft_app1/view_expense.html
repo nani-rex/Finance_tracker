@@ -56,27 +56,16 @@
 
 
   <table>
-            <tr>
-              <th>Expense Name</th>
-              <th>Expense Amount</th>
-              <th> Date</th>
-            </tr>
-            <tr>
-              <td>Amazon purchase</td>
-              <td>$3000</td>
-              <td>01/01/2022</td>
-            </tr>
-            <tr>
-              <td>Investment Interest</td>
-              <td>$500</td>
-              <td>01/15/2022</td>
-            </tr>
-            <tr>
-              <td>Rent </td>
-              <td>$1000</td>
-              <td>02/01/2022</td>
-            </tr>
-          </table>
+    {% for expu in expi %}
+      {% if expu.autor == request.user %}
+        <tr>
+          <th>{{expu.cag}}</th>
+          <th>{{expu.amnt}}</th>
+          <th> {{expu.daet}}</th>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </table>
       
 </body>
 </html>
