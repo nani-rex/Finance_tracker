@@ -58,27 +58,17 @@
 
 
   <table>
-            <tr>
-              <th>Income Name</th>
-              <th>Income Amount</th>
-              <th> Date</th>
-            </tr>
-            <tr>
-              <td>Pension</td>
-              <td>$3000</td>
-              <td>01/01/2022</td>
-            </tr>
-            <tr>
-              <td>Investment Interest</td>
-              <td>$500</td>
-              <td>01/15/2022</td>
-            </tr>
-            <tr>
-              <td>Rental Income </td>
-              <td>$1000</td>
-              <td>02/01/2022</td>
-            </tr>
-          </table>
+    {% for incu in inci %}
+      {% if incu.author == request.user %}
+        <tr>
+          <th>{{incu.catg}}</th>
+          <th>{{incu.amt}}</th>
+          <th> {{incu.date}}</th>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </table>
+
 
 </body>  
 

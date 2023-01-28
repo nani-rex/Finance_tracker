@@ -54,7 +54,8 @@
     </nav>
   </div>
 
-  <form method="post" action="/add_income">
+  <form method="post" action="{% url 'addinc' %}">
+    {% csrf_token %}
     <label for="description">Description:</label>
     <input type="text" id="description" name="description" />
     <br />

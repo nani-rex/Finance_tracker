@@ -15,11 +15,22 @@ def bar(request):
 
 @login_required
 def addinc(request):
+    if request.method=='POST':
+        cat=request.POST.get('description')
+        amtt=request.POST.get('amount')
+        datee=request.POST.get('date')
+        idd= request.user
+        income=Income.objects.create(catg=cat,amt=amtt,date=datee,author=idd)
+        income.save()
     return render(request,'ft_app1/add_income.html')
 
 @login_required
 def viewinc(request):
-    return render(request,'ft_app1/view_income.html')
+    usser=request.user
+    icome = {
+        'inci':Income.objects.all()
+        }
+    return render(request,'ft_app1/view_income.html',icome)
 
 @login_required
 def viewexp(request):
