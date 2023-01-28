@@ -10,4 +10,5 @@ urlpatterns=[
     path('logout/',auth_views.LogoutView.as_view(template_name='ft_app1/logout.html'), name='logout'),
     path('bar/',views.bar,name="navbar"),
     path('addinc/',views.addinc,name="addinc"),
+    path('addrem/',views.addrem,name="addrem"),
 ]

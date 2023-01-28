@@ -15,6 +15,8 @@ def bar(request):
 def addinc(request):
     return render(request,'ft_app1/add_income.html')
 
+def addrem(request):
+    return render(request,'ft_app1/add_reminder.html')
     
 def regiister(request):
     if request.method=='POST':
