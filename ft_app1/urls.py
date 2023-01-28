@@ -15,4 +15,5 @@ urlpatterns=[
     path('uprof/',views.uprof,name="uprof"),
     path('viewinc/',views.viewinc,name="viewinc"),
     path('viewexp/',views.viewexp,name="viewexp"),
+    path('viewrem/',views.viewrem,name="viewrem"),
 ]

@@ -26,6 +26,10 @@ def viewexp(request):
     return render(request,'ft_app1/view_expense.html')
 
 @login_required
+def viewrem(request):
+    return render(request,'ft_app1/view_reminder.html')
+
+@login_required
 def addrem(request):
     return render(request,'ft_app1/add_reminder.html')
 

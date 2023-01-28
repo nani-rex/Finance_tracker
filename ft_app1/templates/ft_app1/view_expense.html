@@ -25,7 +25,7 @@
             <label for="show-features">Features</label>
             <ul>
               <a href="{% url 'addinc' %}">add income</a>
-              <li><a href="view_income.html">view incomes</a></li>
+              <li><a href="{% url 'viewinc' %}">view incomes</a></li>
             </ul>
           </li>
           <li>
@@ -42,7 +42,7 @@
             <label for="show-services">Services</label>
             <ul>
               <li><a href="{% url 'addrem' %}">add reminder</a></li>
-              <li><a href="viewreminder.html">view reminder</a></li>
+              <li><a href="{% url 'viewrem' %}">view reminder</a></li>
               </ul>
             </div>
             <li>
