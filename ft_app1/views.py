@@ -17,7 +17,10 @@ def addinc(request):
 
 def addrem(request):
     return render(request,'ft_app1/add_reminder.html')
-    
+
+def addexp(request):
+    return render(request,'ft_app1/add_expense.html')
+     
 def regiister(request):
     if request.method=='POST':
         form=UserRegisterForm(request.POST)
