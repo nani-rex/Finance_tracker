@@ -25,7 +25,7 @@
             <label for="show-features">Features</label>
             <ul>
               <a href="{% url 'addinc' %}">add income</a>
-              <li><a href="{% url 'viewrem' %}">view incomes</a></li>
+              <li><a href="{% url 'viewinc' %}">view incomes</a></li>
             </ul>
           </li>
           <li>
@@ -44,13 +44,22 @@
               <li><a href="{% url 'addrem' %}">add reminder</a></li>
               <li><a href="{% url 'viewrem' %}">view reminder</a></li>
               </ul>
-            </div>
+            <li>
+              <a href="#" class="desktop-link">Link</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="{% url 'link' %}">Link Profiles</a></li>
+                <li><a href="view.html">View</a></li>
+                </ul>
+              </div>
             <li>
               <nav>
                 <a href="{% url 'uprof' %}">
                   <img src="{% static 'prof_def.jpeg' %}" alt="profile" height="30" width="30">
                 </a>
               </nav>
+        
     </nav>
   </div>
 

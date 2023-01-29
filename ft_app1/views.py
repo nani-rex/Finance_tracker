@@ -11,6 +11,10 @@ def home(request):
     return render(request,'ft_app1/home.html')
 
 @login_required
+def link(request):
+    return render(request,'ft_app1/link.html')
+
+@login_required
 def bar(request):
     return render(request,'ft_app1/navbar.html')
 

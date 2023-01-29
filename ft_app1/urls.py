@@ -16,4 +16,5 @@ urlpatterns=[
     path('viewinc/',views.viewinc,name="viewinc"),
     path('viewexp/',views.viewexp,name="viewexp"),
     path('viewrem/',views.viewrem,name="viewrem"),
+    path('link/',views.link,name="link"),
 ]

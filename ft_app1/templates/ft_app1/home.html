@@ -1,16 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% load static %}
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/navbar_style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-  </head>
-  <body>
-    <div class="wrapper">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/navbar_style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <div class="wrapper">
     <nav>
       <input type="checkbox" id="show-search">
       <input type="checkbox" id="show-menu">
@@ -44,15 +44,26 @@
               <li><a href="{% url 'addrem' %}">add reminder</a></li>
               <li><a href="{% url 'viewrem' %}">view reminder</a></li>
               </ul>
-            </div>
+            <li>
+              <a href="#" class="desktop-link">Link</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="{% url 'link' %}">Link Profiles</a></li>
+                <li><a href="view.html">View</a></li>
+                </ul>
+              </div>
             <li>
               <nav>
                 <a href="{% url 'uprof' %}">
                   <img src="{% static 'prof_def.jpeg' %}" alt="profile" height="30" width="30">
                 </a>
               </nav>
+        
     </nav>
   </div>
+
+
   <div>
      <body background="{% static 'prof_bg.jpeg' %}">
     <section id="hero">
