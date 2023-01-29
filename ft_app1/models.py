@@ -19,5 +19,10 @@ class Expense(models.Model):
 
 
 
+class Reminder(models.Model):
+    catg=models.CharField(max_length=100)
+    amt=models.BigIntegerField()
+    date=models.DateField()
+    author=models.ForeignKey(User,on_delete=models.CASCADE)
 
 

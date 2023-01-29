@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .forms import UserRegisterForm
-from .models import Income,Expense
+from .models import Income,Expense,Reminder
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required
@@ -42,10 +42,21 @@ def viewexp(request):
 
 @login_required
 def viewrem(request):
-    return render(request,'ft_app1/view_reminder.html')
+    usser=request.user
+    remind = {
+        'remi':Reminder.objects.all()
+        }
+    return render(request,'ft_app1/view_reminder.html',remind)
 
 @login_required
 def addrem(request):
+    if request.method=='POST':
+        cat=request.POST.get('Reminder')
+        amtt=request.POST.get('amount')
+        datee=request.POST.get('date')
+        idd= request.user
+        remind=Reminder.objects.create(catg=cat,amt=amtt,date=datee,author=idd)
+        remind.save()
     return render(request,'ft_app1/add_reminder.html')
 
 @login_required

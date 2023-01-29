@@ -25,7 +25,7 @@
             <label for="show-features">Features</label>
             <ul>
               <a href="{% url 'addinc' %}">add income</a>
-              <li><a href="view_income.html">view incomes</a></li>
+              <li><a href="{% url 'viewrem' %}">view incomes</a></li>
             </ul>
           </li>
           <li>
@@ -55,22 +55,15 @@
   </div>
 
   <table>
-    <tr>
-      <th>Date</th>
-      <th>Reminder</th>
-    </tr>
-    <tr>
-      <td>Monday, January 1</td>
-      <td>Pay rent</td>
-    </tr>
-    <tr>
-      <td>Tuesday, January 15</td>
-      <td>PAYPAL</td>
-    </tr>
-    <tr>
-      <td>Friday, January 31</td>
-      <td>HOUSE LOAN</td>
-    </tr>
+    {% for remu in remi %}
+      {% if remu.author == request.user %}
+        <tr>
+          <th>{{remu.catg}}</th>
+          <th>{{remu.amt}}</th>
+          <th> {{remu.date}}</th>
+        </tr>
+      {% endif %}
+    {% endfor %}
   </table>
 
 </body>

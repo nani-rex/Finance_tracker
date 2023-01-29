@@ -55,8 +55,9 @@
   </div>
 
 
- <link href="addReminder.css" rel="stylesheet" type="text/css">
-  <form method="post" action="/add_reminder">
+ 
+  <form method="post" action="{% url 'addrem' %}">
+    {% csrf_token %}
       <label for="Remind about">Reminder:</label>
       <input type="text" id="Reminder" name="Reminder">
       <br>
